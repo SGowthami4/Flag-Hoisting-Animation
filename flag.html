@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flag Animation</title>
+    <link rel="stylesheet" href="flag.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="playground">
+      <div id="responsiveFlag">
+        <div class="safron"></div>
+        <div class="white"></div>
+        <div class="green"></div>
+      </div>
+      <div class="wishes" id="cra">
+        <span class="s">HAPPY</span>
+        <span class="w">INDEPENDENCE</span>
+        <span class="g">DAY</span>
+      </div>
+      <audio id="song">
+        <source src="/Happy Independence .mp3" type="audio/mpeg" />
+      </audio>
+      <div onclick="playPause()" class="suggest">
+        Click here<i class="fa-solid fa-play" id="ctrlIcon"></i>
+      </div>
+    </div>
+    <script>
+      let song = document.getElementById("song");
+      const crackerElement = document.getElementById("cra");
+
+      function playPause() {
+        let flagElement = document.getElementById("responsiveFlag");
+        flagElement.setAttribute("class", "flag");
+        if (ctrlIcon.classList.contains("fa-pause")) {
+          song.pause();
+          ctrlIcon.classList.remove("fa-pause");
+          ctrlIcon.classList.add("fa-play");
+        } else {
+          song.play();
+          ctrlIcon.classList.remove("fa-play");
+          ctrlIcon.classList.add("fa-pause");
+        }
+        crackerElement.setAttribute("class", "cracker");
+      }
+    </script>
+  </body>
+</html>

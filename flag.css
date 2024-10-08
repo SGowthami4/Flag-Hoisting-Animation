@@ -1,0 +1,102 @@
+body {
+  overflow-y: hidden;
+}
+
+.playground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 90%;
+  box-shadow: 3px 3px 6px #ddd, -3px -3px 6px #ddd;
+  display: flex;
+  /* background-image: url(/home/jtd/Downloads/winning.gif); */
+}
+span {
+  font: 120px Arial;
+  font-weight: bold;
+  color: #fff;
+}
+.wishes {
+  text-align: center;
+  margin-top: 100px;
+}
+.s {
+  text-shadow: 0px 0px 20px rgb(255, 140, 0);
+}
+.w {
+  text-shadow: 0px 0px 25px hsl(180, 3%, 64%);
+}
+.g {
+  text-shadow: 0px 0px 20px rgb(19, 136, 9);
+}
+.flag {
+  width: 30%;
+  height: 150px;
+  box-shadow: 3px 3px 6px #ddd, -3px -3px 6px #ddd;
+  margin-left: 50px;
+  margin-top: 50px;
+  animation: hoisting 5s linear;
+}
+
+@keyframes hoisting {
+  0% {
+    margin-top: 900px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+.flag::before {
+  content: "";
+  position: absolute;
+  height: 550px;
+  width: 10px;
+  box-shadow: 3px 3px 6px #ddd, -3px -3px 6px #ddd;
+}
+.flag > div {
+  height: 55px;
+}
+.flag .safron {
+  background: rgb(255, 140, 0);
+}
+.flag .white {
+  background: #fff;
+}
+.flag .green {
+  background: rgb(19, 136, 9);
+}
+.flag > .white::before {
+  content: "";
+  position: absolute;
+  height: 52px;
+  width: 52px;
+  background-size: 52px 52px;
+  background-image: url(/ashok.png);
+  margin-left: 100px;
+  animation: animate 10s linear infinite;
+  /* border-radius: 38px; */
+}
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#ctrlIcon,
+.suggest {
+  font-size: 20px;
+  position: absolute;
+  align-items: center;
+  top: 90%;
+  right: 50%;
+  color: lightgray;
+  cursor: pointer;
+}
+.cracker {
+  background: url(/crackers.gif);
+  margin-left: 1cm;
+  text-align: center;
+  margin-top: 100px;
+}
