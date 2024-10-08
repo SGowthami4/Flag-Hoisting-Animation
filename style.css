@@ -73,10 +73,10 @@ span {
   height: 52px;
   width: 52px;
   background-size: 52px 52px;
-  background-image: url(/ashok.png);
+  background-image: url(/ashokChakra.png);
   margin-left: 100px;
   animation: animate 10s linear infinite;
-  /* border-radius: 38px; */
+  border-radius: 38px;
 }
 @keyframes animate {
   100% {
